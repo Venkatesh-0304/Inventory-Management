@@ -1,0 +1,2 @@
+class InvalidQuantityException < StandardError
+end
