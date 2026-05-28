@@ -15,7 +15,15 @@ module InventoryManager
   end
 
   def display_product_details(product)
-    puts "Product_name : #{product.name} Product_id : #{product.product_id} Price : #{product.price}"
+    if product != nil
+      puts "Product_name : #{product.name} Product_id : #{product.product_id} Price : #{product.price}"
+    else
+      raise Exception("#{product.name} not found")
+    end
+  end
+
+  def check_stock_status(product)
+    puts "Current stock of #{product.name} is : #{product.stock_quantity}"
   end
 
 end
