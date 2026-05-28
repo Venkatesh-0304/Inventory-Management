@@ -11,8 +11,8 @@ module InventoryManager
   end
 
   def remove_stock(product, quantity)
-    if product.stock_quantity >= 0
-      raise Exception("Out of stock")
+    if product.stock_quantity <= 0
+      raise OutOfStockException, "Out of stock"
     else
       product.stock_quantity -= quantity
     end
@@ -22,7 +22,7 @@ module InventoryManager
     if product != nil
       puts "Product_name : #{product.name} Product_id : #{product.product_id} Price : #{product.price}"
     else
-      raise Exception("#{product.name} not found")
+      raise ProductNotFoundException, "Product not found"
     end
   end
 

@@ -1,0 +1,2 @@
+class OutOfStockException < StandardError
+end
