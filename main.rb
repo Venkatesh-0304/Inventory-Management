@@ -1,5 +1,5 @@
-require_relative "product"
 require_relative "inventory_manager"
+require_relative "product"
 p1 = Product.new("Mobile", 1, 250, 3)
 
 puts p1.name
