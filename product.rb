@@ -4,10 +4,15 @@ class Product
   attr_accessor :name, :product_id, :price, :stock_quantity 
 
   def initialize(name, product_id, price, stock_quantity)
+    
     @name = name
     @product_id = product_id
     @price = price
-    @stock_quantity = stock_quantity
+    if stock_quantity >= 0
+      rasie Exception("Invalid Quantity")
+    else
+      @stock_quantity = stock_quantity
+    end
   end
 end
 
