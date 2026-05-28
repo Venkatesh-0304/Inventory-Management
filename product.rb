@@ -20,3 +20,4 @@ puts p1.stock_quantity
 p1.add_product(p1)
 
 puts p1.add_stock(p1, 10)
+puts p1.remove_stock(p1, 4)

@@ -10,4 +10,8 @@ module InventoryManager
     product.stock_quantity += quantity
   end
 
+  def remove_stock(product, quantity)
+    product.stock_quantity -= quantity
+  end
+
 end
