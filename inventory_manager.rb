@@ -14,4 +14,8 @@ module InventoryManager
     product.stock_quantity -= quantity
   end
 
+  def display_product_details(product)
+    puts "Product_name : #{product.name} Product_id : #{product.product_id} Price : #{product.price}"
+  end
+
 end
