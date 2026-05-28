@@ -1,4 +1,6 @@
+require_relative "inventory_manager"
 class Product
+  include InventoryManager
   attr_accessor :name, :product_id, :price, :stock_quantity 
 
   def initialize(name, product_id, price, stock_quantity)
@@ -15,3 +17,6 @@ puts p1.name
 puts p1.product_id
 puts p1.price
 puts p1.stock_quantity
+p1.add_product(p1)
+
+puts p1.add_stock(p1, 10)
