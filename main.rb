@@ -9,7 +9,7 @@ puts p1.stock_quantity
 p1.add_product(p1)
 
 puts p1.add_stock(p1, 10)
-puts p1.remove_stock(p1, 13)
+puts p1.remove_stock(p1, 12)
 # puts p1.remove_stock(p1, 2)
 p1.display_product_details(p1)
 p1.check_stock_status(p1)

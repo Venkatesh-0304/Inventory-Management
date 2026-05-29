@@ -11,7 +11,7 @@ module InventoryManager
   end
 
   def remove_stock(product, quantity)
-    if product.stock_quantity <= 0
+    if product.stock_quantity < quantity
       raise OutOfStockException, "Out of stock"
     else
       product.stock_quantity -= quantity
